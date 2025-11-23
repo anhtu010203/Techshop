@@ -1,10 +1,10 @@
 services:
   - type: web
     name: techshop-backend
-    env: docker
+    runtime: docker
     region: singapore
-    plan: free
-    autoDeploy: true
+    plan: free 
+    autoDeployTrigger: commit
 
     # Environment variables
     envVars:
