@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: techshop-backend
+    env: docker
+    region: singapore
+    plan: free
+    autoDeploy: true
+
+    # Environment variables
+    envVars:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ep-rapid-field-a1h02j06-pooler.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require&channelBinding=require
+      SPRING_DATASOURCE_USERNAME: neondb_owner
+      SPRING_DATASOURCE_PASSWORD: npg_hMoedL5gYaB7
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      JWT_SECRET: techshop-jwt-secret-key-2025-very-very-long-and-secure
